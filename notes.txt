@@ -1,1 +1,8 @@
+Basic Vivado Flow
+    create project
+    add source file
+    add constraint file, i.e. XDC file; defines clocking, pin mapping, and timing restrictions
+    synthesis, implementation, bitstream generation
+    open hardware target (hardware manager)
+    connect and programming
 
