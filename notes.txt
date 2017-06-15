@@ -6,3 +6,42 @@ Basic Vivado Flow
     open hardware target (hardware manager)
     connect and programming
 
+Use IP Integrator and SDK
+    create block design
+    add Zynq IP & GPIO blocks
+        run block automation
+    run connection automation
+        connect board part interface to IP interface
+    generate HDL wrapper after validate design
+        this creates a top module in VHDL
+    generate bitstream
+    export hardware files including bitstream for SDK
+    launch SDK
+        new application project
+    develop software in C
+    program FPGA and launch on hardware
+
+Setup serial port to talk to FPGA
+    dmesg | grep tty to find out the port name, e.g. /dev/ttyUSB1
+    use picocom to connect as a terminal
+
+Create custom IP core
+    create & package IP in Tools
+        create AXI4 peripheral
+    to edit IP core, a new instance of Vivado will open up
+        modify core design: add parameter, port, and logic
+        modify top-level module: add parameter, add port, and instantiation
+    package the IP core
+        compatibility with selective device family
+        merge changes from customization parameters wizard
+        customization GUI to edit parameters
+        review and package, close project
+    --------------------------------
+    create block design, add Zynq IP & prior packaged PWM core IP
+    run connection automation
+    create port on PWM's output signal
+    create HDL wrapper
+    generate bitstream
+    export hardware
+    launch SDK
+    in C program, write the memory address to change PWM IP's slave register?
