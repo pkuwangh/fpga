@@ -6,6 +6,7 @@ Basic Vivado Flow
     open hardware target (hardware manager)
     connect and programming
 
+Getting Started
 Use IP Integrator and SDK
     create block design
     add Zynq IP & GPIO blocks
@@ -24,6 +25,11 @@ Use IP Integrator and SDK
 Setup serial port to talk to FPGA
     dmesg | grep tty to find out the port name, e.g. /dev/ttyUSB1
     use picocom to connect as a terminal
+
+Zynq Server
+    launch SDK
+        create application project based on lwIP (light-weight IP stack) Echo Server
+        Xilinx auto-generates a linker script file, lscript.ld
 
 Create custom IP core
     create & package IP in Tools
