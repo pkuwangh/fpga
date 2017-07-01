@@ -50,4 +50,8 @@ Create custom IP core
     generate bitstream
     export hardware
     launch SDK
-    in C program, write the memory address to change PWM IP's slave register?
+    in C program, write the memory address to change PWM IP's slave register
+
+Build project from Github
+    download zip
+    in Vivado Tcl Console, source proj/create_project.tcl
